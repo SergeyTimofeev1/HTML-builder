@@ -3,8 +3,6 @@ const path = require('path');
 const {stdin, stdout } = process;
 const filePath = path.join(__dirname, 'secret-folder')
 
-// import { stat } from 'node:fs';
-
 fs.readdir(filePath, { withFileTypes: true} ,(err,data) => {
   data.forEach(file => {
     if(!file.isDirectory()) {
